@@ -27,12 +27,3 @@ func Sqrtv2(x float64) float64 {
 
 	return z
 }
-
-func main() {
-	fmt.Println("From Sqrtv1")
-	fmt.Println(Sqrtv1(320))
-	fmt.Println("\n\nFrom Sqrtv2")
-	fmt.Println(Sqrtv2(320))
-	fmt.Println("\n\nFrom the math package")
-	fmt.Println(math.Sqrt(320))
-}
