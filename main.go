@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/tour/pic"
 	"math"
+
+	"golang.org/x/tour/pic"
+	"golang.org/x/tour/wc"
 )
 
 func main() {
@@ -22,4 +24,7 @@ func main() {
 
 	fmt.Println("\n\nPic exercise output-3")
 	pic.Show(Pic3)
+
+	fmt.Println("\n\nWord count exercise output")
+	wc.Test(WordCount)
 }
