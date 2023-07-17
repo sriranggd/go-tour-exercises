@@ -25,6 +25,12 @@ func main() {
 	fmt.Println("\n\nPic exercise output-3")
 	pic.Show(Pic3)
 
-	fmt.Println("\n\nWord count exercise output")
+	fmt.Println("\n\nMaps : Word count exercise output")
 	wc.Test(WordCount)
+
+	fmt.Println("\n\nFunctions : Pingala (Fibonacci) exercise")
+	f := pingala()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
 }
