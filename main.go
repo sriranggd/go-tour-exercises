@@ -5,6 +5,7 @@ import (
 	"math"
 
 	"golang.org/x/tour/pic"
+	"golang.org/x/tour/reader"
 	"golang.org/x/tour/wc"
 )
 
@@ -37,4 +38,7 @@ func main() {
 	fmt.Println("\n\nErrors : Error Interface")
 	fmt.Println(Sqrtv3(2))
 	fmt.Println(Sqrtv3(-2))
+
+	fmt.Println("\n\nReaders : MyReader.Read Infinite stream of character A")
+	reader.Validate(MyReader{})
 }
