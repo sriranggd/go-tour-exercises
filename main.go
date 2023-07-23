@@ -2,7 +2,10 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"math"
+	"os"
+	"strings"
 
 	"golang.org/x/tour/pic"
 	"golang.org/x/tour/reader"
@@ -41,4 +44,9 @@ func main() {
 
 	fmt.Println("\n\nReaders : MyReader.Read Infinite stream of character A")
 	reader.Validate(MyReader{})
+
+	fmt.Println("\n\nReaders : rot13 Reader")
+	s := strings.NewReader("Lbh penpxrq gur pbqr!")
+	r := rot13Reader{s}
+	io.Copy(os.Stdout, &r)
 }
