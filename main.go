@@ -33,4 +33,8 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Println(f())
 	}
+
+	fmt.Println("\n\nErrors : Error Interface")
+	fmt.Println(Sqrtv3(2))
+	fmt.Println(Sqrtv3(-2))
 }
