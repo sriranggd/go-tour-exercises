@@ -48,5 +48,9 @@ func main() {
 	fmt.Println("\n\nReaders : rot13 Reader")
 	s := strings.NewReader("Lbh penpxrq gur pbqr!")
 	r := rot13Reader{s}
-	io.Copy(os.Stdout, &r)
+	_, _ = io.Copy(os.Stdout, &r)
+
+	fmt.Println("\n\nImages : Custom image implementation\n")
+	m := Image{255, 255, Pic2(255, 255)}
+	pic.ShowImage(m)
 }
