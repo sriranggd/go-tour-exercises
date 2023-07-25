@@ -50,7 +50,23 @@ func main() {
 	r := rot13Reader{s}
 	_, _ = io.Copy(os.Stdout, &r)
 
-	fmt.Println("\n\nImages : Custom image implementation\n")
+	fmt.Println("\n\nImages : Custom image implementation")
 	m := Image{255, 255, Pic2(255, 255)}
 	pic.ShowImage(m)
+
+	fmt.Println("\n\nGenerics : Generic list methods")
+	l := &(List[int]{val: 1})
+	l1 := l.insertAfter(5)
+	l2 := l1.insertAfter(4)
+	fmt.Println("\n\nPrinting with l")
+	l.printAll()
+	fmt.Println("\n\nPrinting with l1")
+	l1.printAll()
+	fmt.Println("\n\nPrinting with l2")
+	l2.printAll()
+
+	l.delete(5)
+	fmt.Println("\n\nPrinting with l after deleting 5")
+	l.printAll()
+	l.delete(15)
 }
